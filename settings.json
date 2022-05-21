@@ -1,0 +1,25 @@
+{
+  "workbench.colorTheme": "Atom One Dark",
+  "liveServer.settings.donotVerifyTags": true,
+  "scm.diffDecorations": "none",
+  "editor.fontSize": 16,
+  "editor.fontFamily": "Jetbrains Mono, Fira Code",
+  "editor.fontLigatures": true,
+  "workbench.iconTheme": "vscode-icons",
+  "editor.minimap.enabled": false,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "html.format.enable": false,
+  "json.format.enable": false,
+  "javascript.format.enable": false,
+  "css.format.enable": false,
+  "typescript.format.enable": false,
+  "less.format.enable": false,
+  "scss.format.enable": false
+}

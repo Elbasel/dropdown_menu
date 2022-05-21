@@ -1,0 +1,18 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true
+    },
+    "extends": ["airbnb", "prettier"],
+    "parserOptions": {
+        "parser": "@babel/eslint-parser",
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "allowImportExportEverywhere": true
+    },
+    "plugins": ["prettier"],
+    "rules": {
+        "prettier/prettier": ["error"]
+    }
+}
