@@ -4,6 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
     mode: 'development',
     target: 'web',
+    experiments: {
+        outputModule: true,
+    },
     entry: {
         index: './src/index.js',
         // example: './src/example.js',
@@ -14,10 +17,9 @@ module.exports = {
         // filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
-        library: 'dropdownMenu',
-        libraryTarget: 'umd',
-        globalObject: 'this',
-        umdNameDefine: true,
+        library: {
+            type: 'module',
+        },
         // publicPath: '/',
     },
     // optimization: {
