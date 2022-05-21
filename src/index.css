@@ -10,46 +10,91 @@
     --main-font: 'Montserrat', sans-serif;
 }
 
-/* ========== END Dark Mode Colors ========== */
-/* ========== START CSS Reset ========== */
-html {
-    box-sizing: border-box;
-    font-size: 14px;
-    /* color-scheme: dark; */
+.dropdown-menu {
+    width: 300px;
+    height: 50px;
+    border-radius: 24px;
+    background-color: var(--primary-background);
+    color: var(--text-color);
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    position: relative;
 }
 
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+.dropdown-text {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    font-size: 22px;
+    font-weight: 10;
+    margin-right: auto;
+    flex: 1;
+    padding-left: 12px;
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ol,
-ul {
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
-    font-family: var(--main-font);
+.unselected {
+    color: rgba(255, 255, 255, 0.486);
 }
 
-ol,
-ul {
-    list-style: none;
+.selected {
+    color: var(--text-color);
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+.dropdown-menu-img {
+    width: 64px;
+    height: 64px;
+    background: url('./assets/down-white.png');
+    transition: background 400ms ease-in-out;
+    cursor: pointer;
 }
 
-/* ========== END CSS Reset ========== */
+.dropdown-menu:hover .dropdown-menu-img {
+    width: 64px;
+    height: 64px;
+    background: url('./assets/down-blue.png');
+}
+
+.dropdown-menu:active .dropdown-menu-img {
+    transform: translateY(2px);
+}
+
+p.option {
+    color: black;
+    font-size: 18px;
+    width: 300px;
+    height: 50px;
+    border-radius: 24px;
+    background-color: var(--primary-background);
+    color: var(--text-color);
+    font-size: 22px;
+    cursor: pointer;
+    border: 1px solid black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1;
+
+    transition: background-color 400ms ease-in-out;
+}
+
+p.option:hover {
+    background-color: #004daa;
+    color: white;
+}
+
+p.hidden {
+    display: none;
+}
+
+p.shown {
+    display: flex;
+    position: absolute;
+}

@@ -1,16 +1,16 @@
 {
-    "name": "@elbasel619/webpack-boilerplate",
+    "name": "@elbasel619/dropdown-menu",
     "version": "1.0.0",
-    "description": "boilerplate for project quick start",
+    "description": "a simple dropdown menu",
     "license": "MIT",
     "main": "./dist/index.bundle.js",
     "files": [
         "dist/*"
     ],
-    "repository": "elbasel/boilerplate",
+    "repository": "elbasel/dropdown_menu",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "webpack --progress --mode=none",
+        "build": "webpack --progress --mode=production",
         "watch": "webpack --progress --watch",
         "serve": "webpack-dev-server --open",
         "server": "node server.js"
