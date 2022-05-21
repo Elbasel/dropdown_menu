@@ -211,7 +211,4 @@ const dropdownMenu = (() => {
     }
 })()
 
-document.body.appendChild(dropdownMenu.getNewDropdown('hello', [1, 2, 3]))
-console.log(downWhite)
-
 export default dropdownMenu
