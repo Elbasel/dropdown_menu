@@ -1,4 +1,6 @@
 import './index.css'
+import downWhite from './assets/down-white.png'
+import downBlue from './assets/down-blue.png'
 
 const dropdownMenu = (() => {
     // returns an object with one function 'getNewDropDownMenu'
@@ -154,10 +156,26 @@ const dropdownMenu = (() => {
         }
     }
 
+    function switchBackgroundToBlue(e) {
+        const imgDiv =
+            e.target.parentElement.querySelector('.dropdown-menu-img')
+        imgDiv.style.background = `url(${downBlue})`
+    }
+
+    function switchBackgroundToWhite(e) {
+        const imgDiv =
+            e.target.parentElement.querySelector('.dropdown-menu-img')
+        imgDiv.style.background = `url(${downWhite})`
+    }
+
     // Return a new node object that can be appended to the page
     function getNewDropdown(defaultText, optionsArray) {
         const mainDiv = document.createElement('div')
         mainDiv.classList.add('dropdown-menu')
+        mainDiv.addEventListener('mouseover', (e) => switchBackgroundToBlue(e))
+        mainDiv.addEventListener('mouseleave', (e) =>
+            switchBackgroundToWhite(e),
+        )
 
         const textDiv = document.createElement('div')
         textDiv.textContent = defaultText
@@ -166,6 +184,7 @@ const dropdownMenu = (() => {
         textDiv.addEventListener('click', (e) => showCurrentMenu(e))
 
         const imgDiv = document.createElement('div')
+        imgDiv.style.background = `url(${downWhite})`
         imgDiv.classList.add('dropdown-menu-img')
         imgDiv.classList.add('arrow-down')
         imgDiv.addEventListener('click', (e) => showCurrentMenu(e))
@@ -191,5 +210,8 @@ const dropdownMenu = (() => {
         getNewDropdown,
     }
 })()
+
+document.body.appendChild(dropdownMenu.getNewDropdown('hello', [1, 2, 3]))
+console.log(downWhite)
 
 export default dropdownMenu

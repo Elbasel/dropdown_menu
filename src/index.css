@@ -49,7 +49,7 @@
 .dropdown-menu-img {
     width: 64px;
     height: 64px;
-    background: url('./assets/down-white.png');
+    /* background: url('./assets/down-white.png'); */
     transition: background 400ms ease-in-out;
     cursor: pointer;
 }
@@ -57,7 +57,7 @@
 .dropdown-menu:hover .dropdown-menu-img {
     width: 64px;
     height: 64px;
-    background: url('./assets/down-blue.png');
+    /* background: url('./assets/down-blue.png'); */
 }
 
 .dropdown-menu:active .dropdown-menu-img {
