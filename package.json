@@ -1,6 +1,6 @@
 {
     "name": "@elbasel619/dropdown-menu",
-    "version": "5.0.0",
+    "version": "6.0.0",
     "description": "a simple dropdown menu",
     "license": "MIT",
     "main": "./dist/main.js",
