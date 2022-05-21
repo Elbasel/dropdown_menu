@@ -8,16 +8,16 @@ module.exports = {
         // example: './src/example.js',
     },
     output: {
-        // filename: 'main.js',
+        filename: 'main.js',
         // filename: 'bundle.js',
-        filename: '[name].bundle.js',
+        // filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
         // publicPath: '/',
     },
-    optimization: {
-        runtimeChunk: 'single',
-    },
+    // optimization: {
+    //     runtimeChunk: 'single',
+    // },
     devtool: 'inline-source-map',
     plugins: [
         new HtmlWebpackPlugin({
